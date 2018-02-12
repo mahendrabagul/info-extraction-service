@@ -24,7 +24,7 @@ public class InfoExtracter {
     public Minister connect(String ministerName) {
         Minister minister = new Minister();
         try {
-            Document document = Jsoup.connect(KMM_CONSTANTS.GOOGLE_URL + ministerName).get();
+            Document document = Jsoup.connect(KMM_CONSTANTS.GOOGLE_URL + ministerName).userAgent("Chrome/33.0.1750.152").timeout(5000).get();
             String fullName = extractVal(document, SelectorsContants.FULL_NAME_SELECTOR_1);
             if (StringUtils.isEmpty(fullName))
                 minister.setFullName(extractVal(document, SelectorsContants.FULL_NAME_SELECTOR_2));
