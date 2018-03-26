@@ -9,9 +9,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class ExcelGenerator {
-    private static String[] columns = {"Full Name", "Brief Info", "Designation", "BirthDate", "Political Party", "Spouse", "Website", "Wikipedia", "Facebook", "Instagram", "Google Plus", "Linked In", "Twitter", "Youtube"};
+    private static String[] columns = {"Full Name", "Brief Info", "Designation", "BirthDate", "Political Party",
+                                       "Spouse", "Website", "Wikipedia", "Facebook", "Instagram", "Google Plus",
+                                       "Linked In", "Twitter", "Youtube"};
 
-    public static void generate(List<Minister> ministers) throws IOException {
+    public static void generate(List<Minister> ministers) throws IOException
+    {
         // Create a Workbook
         Workbook workbook = new XSSFWorkbook(); // new HSSFWorkbook() for generating `.xls` file
 
@@ -36,7 +39,8 @@ public class ExcelGenerator {
         Row headerRow = sheet.createRow(0);
 
         // Creating cells
-        for (int i = 0; i < columns.length; i++) {
+        for (int i = 0; i < columns.length; i++)
+        {
             Cell cell = headerRow.createCell(i);
             cell.setCellValue(columns[i]);
             cell.setCellStyle(headerCellStyle);
@@ -45,26 +49,42 @@ public class ExcelGenerator {
         // Create Other rows and cells with ministers data
 
         int rowNum = 1;
-        for (Minister minister : ministers) {
+        for (Minister minister : ministers)
+        {
             Row row = sheet.createRow(rowNum++);
-            row.createCell(0).setCellValue(minister.getFullName());
-            row.createCell(1).setCellValue(minister.getBriefInfo());
-            row.createCell(2).setCellValue(minister.getDesignation());
-            row.createCell(3).setCellValue(minister.getBirthDate());
-            row.createCell(4).setCellValue(minister.getPoliticalParty());
-            row.createCell(5).setCellValue(minister.getSpouse());
-            row.createCell(6).setCellValue(minister.getWebsite());
-            row.createCell(7).setCellValue(minister.getWikipedia());
-            row.createCell(8).setCellValue(minister.getFacebook());
-            row.createCell(9).setCellValue(minister.getInstagram());
-            row.createCell(10).setCellValue(minister.getGooglePlus());
-            row.createCell(11).setCellValue(minister.getLinkedIn());
-            row.createCell(12).setCellValue(minister.getTwitter());
-            row.createCell(13).setCellValue(minister.getYoutube());
+            row.createCell(0)
+                    .setCellValue(minister.getFullName());
+            row.createCell(1)
+                    .setCellValue(minister.getBrief());
+            row.createCell(2)
+                    .setCellValue(minister.getCurrentDesignation());
+            row.createCell(3)
+                    .setCellValue(minister.getBorn());
+            row.createCell(4)
+                    .setCellValue(minister.getParty());
+            row.createCell(5)
+                    .setCellValue(minister.getSpouse());
+            //            row.createCell(6)
+            //                    .setCellValue(minister.get());
+            row.createCell(7)
+                    .setCellValue(minister.getWikipediaUrl());
+            row.createCell(8)
+                    .setCellValue(minister.getFacebookUrl());
+            row.createCell(9)
+                    .setCellValue(minister.getInstagramUrl());
+            row.createCell(10)
+                    .setCellValue(minister.getGooglePlusUrl());
+            row.createCell(11)
+                    .setCellValue(minister.getLinkedInUrl());
+            row.createCell(12)
+                    .setCellValue(minister.getTwitterUrl());
+            row.createCell(13)
+                    .setCellValue(minister.getYoutubeUrl());
         }
 
         // Resize all columns to fit the content size
-        for (int i = 0; i < columns.length; i++) {
+        for (int i = 0; i < columns.length; i++)
+        {
             sheet.autoSizeColumn(i);
         }
         // Write the output to a file

@@ -1,6 +1,6 @@
+Narendra Modi
 Arvind Kejriwal
 Devendra Fadnavis
-Narendra Modi
 Rajnath Singh
 Sushma Swaraj
 Arun Jaitley
@@ -8,92 +8,143 @@ Nitin Jairam Gadkari
 Suresh Prabhu
 D.V. Sadananda Gowda
 Uma Bharati
-Ramvilas Paswan
-Maneka Sanjay Gandhi
-Ananthkumar
-Ravi Shankar Prasad
-Jagat Prakash Nadda
-Ashok Gajapathi Raju Pusapati
-Anant Geete
-Harsimrat Kaur Badal
-Narendra Singh Tomar
-Chaudhary Birender Singh
-Jual Oram
-Radha Mohan Singh
-Thaawar Chand Gehlot
 Smriti Zubin Irani
-Dr. Harsh Vardhan
 Prakash Javadekar
-Dharmendra Pradhan
 Piyush Goyal
-Nirmala Sitharaman
-Mukhtar Abbas Naqvi
-Rao Inderjit Singh
-Santosh Kumar Gangwar
-Shripad Yesso Naik
-Giriraj Singh
-Dr. Jitendra Singh
-Dr. Mahesh Sharma
-Manoj Sinha
-Col. Rajyavardhan Singh Rathore
-Raj Kumar Singh
-Hardeep Singh Puri
-Alphons Kannanthanam
-Shiv Pratap Shukla
-Vijay Goel
-Ashwini Kumar Chaubey
-Virender Kumar
-Anantkumar Hegde
-Gajendra Singh Shekhawat
-Dr. Satya Pal Singh
-V.K. Singh
-Santosh Kumar Gangwar
-Faggan Singh Kulaste
-S.S. Ahluwalia
-Ramdas Athawale
-Ram Kripal Yadav
-Haribhai Parthbhai Chaudhary
-Giriraj Singh
-Hansraj Gangaram Ahir
-Ramesh Chandappa Jigajinagi
-Rajen Gohain
-Parshottam Rupala
-M.J. Akbar
-Upendra Kushwaha
-Radhakrishnan P.
-Kiren Rijiju
-Krishan Pal
-Jasvantsinh Sumanbhai Bhabhor
-Vishnu Deo
-Sudarshan Bhagat
-Y.S. Chowdary
-Jayant Sinha
+Yogi Adityanath
+Pranab Mukherjee
+Mohan Bhagawat
+Manohar Parrikar
+Sonia Gandhi
+Uddhav Thackeray
+Nitish Kumar
+Mamata Banerjee
+Mehbooba Mufti Sayeed
+Vasundhara Raje
+M Venkaiah Naidu
+Himanta Biswa Sarma
+Atal Behari Vajpayee
+Indira Gandhi
+APJ Abdul Kalam
+Shashi Tharoor
+Manmohan Singh
+Zakir Hussain
+P. V. Narasimha Rao
+Jairam Ramesh
+Abhishek Singhvi
+Anand Singh
+Nama Nageswara Rao
+Dr. Mahendra Prasad
+Dr. Vijay Mallya
+Jaya Bachchan
+Satyanarayana Chowdary
+Anil H. Lad
+Naveen Jindal
+Lalu Prasad Yadav
+Sachin pilot
+Priyanka Vadra
+Akhilesh Yadav
+Ghulam Nabi Azad
+Shri. Nara Chandrababu Naidu
+Jai Ram Thakur
+Shri Raghubar Das
+Shri Siddaramaiah
+Shri Pinarayi Vijayan
+Shri Shivraj Singh Chouhan
+Shri Devendra Fadnavis
+Nongthombam Biren Singh
+Conrad Sangma
+Shri Lal Thanhawla
+Neiphiu Rio
+Shri Naveen Patnaik
+Shri. V. Narayanasamy
+Shri Captain Amarinder Singh
+Smt. Vasundhara Raje
+Edappadi K Palaniswami
+Shri Pawan Kumar Chamling
+Shri K Chandrasekhar Rao
+Shri Biplab Kumar Deb
+Trivendra Singh Rawat
+Pema Khandu
+Shri Sarbananda Sonowal
+Dr. Raman Singh
+Shri Manohar Lal
+Shri Vijaybhai R. Rupani
+Y. S. Jaganmohan Reddy
+Debabrata Saikia
+Tejashwi Yadav
+T. S. Singhdeo
+Chandrakant Kavlekar
+Paresh Dhanani
+Abhay Singh Chautala
+Mukesh Agnihotri
+Hemant Soren
+Omar Abdullah
+Jagadish Shettar
+Ramesh Chennithala
+Bala Bachchan
+Radhakrishna Vikhe Patil
+Okram Ibobi Singh
+Mukul Sangma
+Vanlalzawma
+Narasingha Mishra
+T. R. Zeliang
+N. Rangaswamy
+Sukhpal Singh Khaira
+Rameshwar Dudi
+Prem Singh Tamang
+M. K. Stalin
+Kunduru Jana Reddy
+Manik Sarkar
+Ram Govind Chaudhary
+Indira Hridayesh
+Abdul Mannan
+Dhananjay Munde
+Shabbir Ali
+Ahmed Hasan
+K. S. Eshwarappa
+C. Ramachandraiah
+Mulayam Singh Yadav
+Janeshwar Mishra
+Beni Prasad Verma
+Akhilesh Yadav
+Azam Khan
+Ram Gopal Yadav
+Shivpal Singh Yadav
+Dharmendra Yadav
+Abu Azmi
+Rais Shaikh
+Dimple Yadav
+Rewati Raman Singh
+Beni Prasad Verma
+Preeti Chobey
+Kamaal Rashid Khan
+Bhaichung Bhutia
+Mohammad Kaif
+Bappi Lahiri
+Kirron Kher
+Hema Malini
+Mahesh Manjrekar
+Ravi Kishan
+Vinod Khanna
+Biswajit Chatterjee
+Sandhya Roy
+Jaaved Jaaferi
+Prakash Jha
+Bhagwant Mann
+Nandan Nilekani
+Gul Panag
+Jaya Prada
+Rajyavardhan Singh Rathore
+Paresh Rawal
+Rakhi Sawant
+Indranil Sen
+Moon Moon Sen
+Vijay Kumar Singh
+Shatrughan Sinha
+P. C. Sorcar, Jr.
 Babul Supriyo
-Sadhvi Niranjan Jyoti
-Vijay Sampla
-Arjun Ram Meghwal
-Ajay Tamta
-Krishna Raj
-Mansukh L. Mandaviya
-Anupriya Patel
-C.R. Chaudhary
-P.P. Chaudhary
-Subhash Ramrao Bhamre
-Sharad Pawar
-Padavi Nagesh Dilwarsing
-Padvi Udesing Kocharu
-Gavit Vijaykumar Krushnarao
-Valvi Kuvarsing Fulaji
-Gavit Manjula Tulshiram
-Bhadane Manohar Dattatray
-Anil Anna Gote
-Jaykumar Jitendrasinh Rawal
-Dr. Jitendra Yuvraj Thakur
-Jagdishchandra Ramesh Valvi
-Haribhau Madhav Jawale
-Sawkare Sanjay Waman
-Suresh Damu Bhole (Rajumama)
-P.C. Aabasaheb Patil
-Anil Bhaidas Patil (Amalner)
-Machhindra Ratan Patil
-Unmesh Bhaiyyasaheb Patil
+Manoj Tiwari
+Innocent Vincent
+Nagma
+S. Jaganmohan Reddy
