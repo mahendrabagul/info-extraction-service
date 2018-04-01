@@ -11,6 +11,11 @@ import org.springframework.context.annotation.Bean;
 public class InfoExtractionServiceApplication {
     private int maxUploadSizeInMb = 50 * 1024 * 1024; // 50 MB
 
+    public static void main(String[] args)
+    {
+        SpringApplication.run(InfoExtractionServiceApplication.class, args);
+    }
+
     @Bean
     public TomcatEmbeddedServletContainerFactory tomcatEmbedded()
     {
@@ -24,10 +29,5 @@ public class InfoExtractionServiceApplication {
             }
         });
         return tomcat;
-    }
-
-    public static void main(String[] args)
-    {
-        SpringApplication.run(InfoExtractionServiceApplication.class, args);
     }
 }

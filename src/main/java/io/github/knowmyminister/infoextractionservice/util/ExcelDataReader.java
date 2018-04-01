@@ -97,6 +97,8 @@ public class ExcelDataReader {
         minister.setSpeechUrl(getCellValue(row.getCell(columnCount++)));
         minister.setProfileUrl(getCellValue(row.getCell(columnCount++)));
         minister.setPartyImageUrl(getCellValue(row.getCell(columnCount++)));
+        minister.setConstituency(getCellValue(row.getCell(columnCount++)));
+        minister.setAddress(getCellValue(row.getCell(columnCount++)));
         return minister;
     }
 }

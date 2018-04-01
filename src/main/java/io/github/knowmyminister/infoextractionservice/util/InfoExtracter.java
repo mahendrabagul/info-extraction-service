@@ -21,6 +21,45 @@ import java.util.*;
 public class InfoExtracter {
     private static int count = 0;
 
+    public static void main(String[] args) throws IOException
+    {
+        InfoExtracter infoExtracter = new InfoExtracter();
+        List<Minister> ministers = new ArrayList<>();
+        readMinistersName();
+        for (String ministerName : readMinistersName())
+        {
+            ministers.add(infoExtracter.connect(ministerName));
+            try
+            {
+                Thread.sleep(3000);
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        //ExcelGenerator.generate(ministers);
+        JSONGenerator.generate(ministers);
+    }
+
+    private static Set<String> readMinistersName()
+    {
+        Set<String> ministers = new HashSet<>();
+        try (FileReader fr = new FileReader(KMM_CONSTANTS.FILENAME); BufferedReader br = new BufferedReader(fr))
+        {
+            String ministerName = null;
+            while ((ministerName = br.readLine()) != null)
+            {
+                ministers.add(ministerName);
+            }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        return ministers;
+    }
+
     public Minister connect(String ministerName)
     {
         Minister minister = new Minister();
@@ -83,45 +122,5 @@ public class InfoExtracter {
             }
         }
         return null;
-    }
-
-
-    public static void main(String[] args) throws IOException
-    {
-        InfoExtracter infoExtracter = new InfoExtracter();
-        List<Minister> ministers = new ArrayList<>();
-        readMinistersName();
-        for (String ministerName : readMinistersName())
-        {
-            ministers.add(infoExtracter.connect(ministerName));
-            try
-            {
-                Thread.sleep(3000);
-            }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-        }
-        //ExcelGenerator.generate(ministers);
-        JSONGenerator.generate(ministers);
-    }
-
-    private static Set<String> readMinistersName()
-    {
-        Set<String> ministers = new HashSet<>();
-        try (FileReader fr = new FileReader(KMM_CONSTANTS.FILENAME); BufferedReader br = new BufferedReader(fr))
-        {
-            String ministerName = null;
-            while ((ministerName = br.readLine()) != null)
-            {
-                ministers.add(ministerName);
-            }
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        return ministers;
     }
 }

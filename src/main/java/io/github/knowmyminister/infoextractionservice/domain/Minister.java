@@ -24,6 +24,8 @@ public class Minister {
     private String partyImageUrl;
     private String createdAt;
     private String updatedAt;
+    private String constituency;
+    private String address;
     private String id;
 
     public String getFullName()
@@ -264,6 +266,26 @@ public class Minister {
     public void setId(String id)
     {
         this.id = id;
+    }
+
+    public String getConstituency()
+    {
+        return constituency;
+    }
+
+    public void setConstituency(String constituency)
+    {
+        this.constituency = constituency;
+    }
+
+    public String getAddress()
+    {
+        return address;
+    }
+
+    public void setAddress(String address)
+    {
+        this.address = address;
     }
 }
 
