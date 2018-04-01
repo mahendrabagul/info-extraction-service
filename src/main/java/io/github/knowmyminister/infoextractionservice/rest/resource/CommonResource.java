@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by mahendra.hiraman on 2/8/2018.
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api/v1/rest")
 public class CommonResource
 {
     @Autowired
