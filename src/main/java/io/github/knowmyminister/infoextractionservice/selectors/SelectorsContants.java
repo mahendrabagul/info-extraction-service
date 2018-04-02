@@ -19,6 +19,5 @@ public class SelectorsContants {
     public static final String BIRTHDATE_SELECTOR = "#rhs_block > div > div.kp-blk.knowledge-panel.Wnoohf.OJXvsb > div > div.ifM9O > div:nth-child(2) > div.SALvLe.farUxc.mJ2Mod > div > div:nth-child(3) > div > div > span.LrzXr.kno-fv";
     public static final String PARTY_SELECTOR = "#rhs_block > div > div.kp-blk.knowledge-panel.Wnoohf.OJXvsb > div > div.ifM9O > div:nth-child(2) > div.SALvLe.farUxc.mJ2Mod > div > div:nth-child(5) > div > div > span.LrzXr.kno-fv > a";
     public static final String SPOUSE_SELECTOR = "#rhs_block > div > div.kp-blk.knowledge-panel.Wnoohf.OJXvsb > div > div.ifM9O > div:nth-child(2) > div.SALvLe.farUxc.mJ2Mod > div > div:nth-child(6) > div > div > span.LrzXr.kno-fv > a";
-
-
+    public static final String IMAGE = "#rg_s > div:nth-child(1) > a > img";
 }

@@ -1,5 +1,8 @@
 package io.github.knowmyminister.infoextractionservice.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Minister {
     private String fullName;
     private String brief;
@@ -18,273 +21,226 @@ public class Minister {
     private String speechUrl;
     private String salutation;
     private String education;
-    private int height;
+    private String height;
     private String parents;
     private String profileUrl;
     private String partyImageUrl;
     private String createdAt;
     private String updatedAt;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonIgnore
     private String constituency;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonIgnore
     private String address;
     private String id;
 
-    public String getFullName()
-    {
+    public String getFullName() {
         return fullName;
     }
 
-    public void setFullName(String fullName)
-    {
+    public void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
-    public String getBrief()
-    {
+    public String getBrief() {
         return brief;
     }
 
-    public void setBrief(String brief)
-    {
+    public void setBrief(String brief) {
         this.brief = brief;
     }
 
-    public String getCurrentDesignation()
-    {
+    public String getCurrentDesignation() {
         return currentDesignation;
     }
 
-    public void setCurrentDesignation(String currentDesignation)
-    {
+    public void setCurrentDesignation(String currentDesignation) {
         this.currentDesignation = currentDesignation;
     }
 
-    public String getBorn()
-    {
+    public String getBorn() {
         return born;
     }
 
-    public void setBorn(String born)
-    {
+    public void setBorn(String born) {
         this.born = born;
     }
 
-    public String getOfficialSite()
-    {
+    public String getOfficialSite() {
         return officialSite;
     }
 
-    public void setOfficialSite(String officialSite)
-    {
+    public void setOfficialSite(String officialSite) {
         this.officialSite = officialSite;
     }
 
-    public String getParty()
-    {
+    public String getParty() {
         return party;
     }
 
-    public void setParty(String party)
-    {
+    public void setParty(String party) {
         this.party = party;
     }
 
-    public String getSpouse()
-    {
+    public String getSpouse() {
         return spouse;
     }
 
-    public void setSpouse(String spouse)
-    {
+    public void setSpouse(String spouse) {
         this.spouse = spouse;
     }
 
-    public String getWikipediaUrl()
-    {
+    public String getWikipediaUrl() {
         return wikipediaUrl;
     }
 
-    public void setWikipediaUrl(String wikipediaUrl)
-    {
+    public void setWikipediaUrl(String wikipediaUrl) {
         this.wikipediaUrl = wikipediaUrl;
     }
 
-    public String getFacebookUrl()
-    {
+    public String getFacebookUrl() {
         return facebookUrl;
     }
 
-    public void setFacebookUrl(String facebookUrl)
-    {
+    public void setFacebookUrl(String facebookUrl) {
         this.facebookUrl = facebookUrl;
     }
 
-    public String getInstagramUrl()
-    {
+    public String getInstagramUrl() {
         return instagramUrl;
     }
 
-    public void setInstagramUrl(String instagramUrl)
-    {
+    public void setInstagramUrl(String instagramUrl) {
         this.instagramUrl = instagramUrl;
     }
 
-    public String getGooglePlusUrl()
-    {
+    public String getGooglePlusUrl() {
         return googlePlusUrl;
     }
 
-    public void setGooglePlusUrl(String googlePlusUrl)
-    {
+    public void setGooglePlusUrl(String googlePlusUrl) {
         this.googlePlusUrl = googlePlusUrl;
     }
 
-    public String getLinkedInUrl()
-    {
+    public String getLinkedInUrl() {
         return linkedInUrl;
     }
 
-    public void setLinkedInUrl(String linkedInUrl)
-    {
+    public void setLinkedInUrl(String linkedInUrl) {
         this.linkedInUrl = linkedInUrl;
     }
 
-    public String getTwitterUrl()
-    {
+    public String getTwitterUrl() {
         return twitterUrl;
     }
 
-    public void setTwitterUrl(String twitterUrl)
-    {
+    public void setTwitterUrl(String twitterUrl) {
         this.twitterUrl = twitterUrl;
     }
 
-    public String getYoutubeUrl()
-    {
+    public String getYoutubeUrl() {
         return youtubeUrl;
     }
 
-    public void setYoutubeUrl(String youtubeUrl)
-    {
+    public void setYoutubeUrl(String youtubeUrl) {
         this.youtubeUrl = youtubeUrl;
     }
 
-    public String getSpeechUrl()
-    {
+    public String getSpeechUrl() {
         return speechUrl;
     }
 
-    public void setSpeechUrl(String speechUrl)
-    {
+    public void setSpeechUrl(String speechUrl) {
         this.speechUrl = speechUrl;
     }
 
-    public String getSalutation()
-    {
+    public String getSalutation() {
         return salutation;
     }
 
-    public void setSalutation(String salutation)
-    {
+    public void setSalutation(String salutation) {
         this.salutation = salutation;
     }
 
-    public String getEducation()
-    {
+    public String getEducation() {
         return education;
     }
 
-    public void setEducation(String education)
-    {
+    public void setEducation(String education) {
         this.education = education;
     }
 
-    public int getHeight()
-    {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(int height)
-    {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public String getParents()
-    {
+    public String getParents() {
         return parents;
     }
 
-    public void setParents(String parents)
-    {
+    public void setParents(String parents) {
         this.parents = parents;
     }
 
-    public String getProfileUrl()
-    {
+    public String getProfileUrl() {
         return profileUrl;
     }
 
-    public void setProfileUrl(String profileUrl)
-    {
+    public void setProfileUrl(String profileUrl) {
         this.profileUrl = profileUrl;
     }
 
-    public String getPartyImageUrl()
-    {
+    public String getPartyImageUrl() {
         return partyImageUrl;
     }
 
-    public void setPartyImageUrl(String partyImageUrl)
-    {
+    public void setPartyImageUrl(String partyImageUrl) {
         this.partyImageUrl = partyImageUrl;
     }
 
-    public String getCreatedAt()
-    {
+    public String getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt)
-    {
+    public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 
-    public String getUpdatedAt()
-    {
+    public String getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(String updatedAt)
-    {
+    public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
 
-    public String getId()
-    {
+    public String getId() {
         return id;
     }
 
-    public void setId(String id)
-    {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getConstituency()
-    {
+    public String getConstituency() {
         return constituency;
     }
 
-    public void setConstituency(String constituency)
-    {
+    public void setConstituency(String constituency) {
         this.constituency = constituency;
     }
 
-    public String getAddress()
-    {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address)
-    {
+    public void setAddress(String address) {
         this.address = address;
     }
 }

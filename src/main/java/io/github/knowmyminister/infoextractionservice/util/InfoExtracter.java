@@ -21,57 +21,79 @@ import java.util.*;
 public class InfoExtracter {
     private static int count = 0;
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
+//        generateJson();
+        generateImages();
+    }
+
+    private static void generateImages() throws IOException {
         InfoExtracter infoExtracter = new InfoExtracter();
-        List<Minister> ministers = new ArrayList<>();
-        readMinistersName();
-        for (String ministerName : readMinistersName())
-        {
-            ministers.add(infoExtracter.connect(ministerName));
-            try
-            {
-                Thread.sleep(3000);
-            }
-            catch (InterruptedException e)
-            {
+        List<String> images = new ArrayList<>();
+        for (String ministerName : readMinistersName()) {
+            images.add(infoExtracter.getImage(ministerName));
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        //ExcelGenerator.generate(ministers);
-        JSONGenerator.generate(ministers);
     }
 
-    private static Set<String> readMinistersName()
-    {
-        Set<String> ministers = new HashSet<>();
-        try (FileReader fr = new FileReader(KMM_CONSTANTS.FILENAME); BufferedReader br = new BufferedReader(fr))
-        {
-            String ministerName = null;
-            while ((ministerName = br.readLine()) != null)
-            {
-                ministers.add(ministerName);
+    private static void generateJson() throws IOException {
+        InfoExtracter infoExtracter = new InfoExtracter();
+        List<Minister> ministers = new ArrayList<>();
+        for (String ministerName : readMinistersName()) {
+            ministers.add(infoExtracter.connect(ministerName));
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
-        catch (IOException e)
-        {
+        JSONGenerator.generateFile(ministers);
+    }
+
+    private static Set<String> readMinistersName() {
+        Set<String> ministers = new HashSet<>();
+        try (FileReader fr = new FileReader(KMM_CONSTANTS.FILENAME); BufferedReader br = new BufferedReader(fr)) {
+            String ministerName = null;
+            while ((ministerName = br.readLine()) != null) {
+                ministers.add(ministerName);
+            }
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return ministers;
     }
 
-    public Minister connect(String ministerName)
-    {
+    public String getImage(String ministerName) {
+        String image = null;
+        String url = KMM_CONSTANTS.GOOGLE_IMAGE_URL.replace("{QUERY_STRING_VALUE}", ministerName);
+        try {
+            Document document = Jsoup.connect(url)
+                    .timeout(5000)
+                    .get();
+            String Image = extractAttr(document, SelectorsContants.IMAGE, "src");
+            System.out.println(++count);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return image;
+    }
+
+    public Minister connect(String ministerName) {
         Minister minister = new Minister();
-        try
-        {
+        try {
             Document document = Jsoup.connect(KMM_CONSTANTS.GOOGLE_URL + ministerName)
                     .timeout(5000)
                     .get();
             String fullName = extractVal(document, SelectorsContants.FULL_NAME_SELECTOR_1);
-            if (StringUtils.isEmpty(fullName))
-            { minister.setFullName(extractVal(document, SelectorsContants.FULL_NAME_SELECTOR_2)); }
-            else { minister.setFullName(fullName); }
+            if (StringUtils.isEmpty(fullName)) {
+                minister.setFullName(extractVal(document, SelectorsContants.FULL_NAME_SELECTOR_2));
+            } else {
+                minister.setFullName(fullName);
+            }
             minister.setBrief(extractVal(document, SelectorsContants.BRIEF_INFO_SELECTOR));
             minister.setCurrentDesignation(extractVal(document, SelectorsContants.DESIGNATION_SELECTOR));
             minister.setBorn(extractVal(document, SelectorsContants.BIRTHDATE_SELECTOR));
@@ -87,37 +109,29 @@ public class InfoExtracter {
             minister.setYoutubeUrl(extractAttr(document, SelectorsContants.YOUTUBE_LINK_SELECTOR, "href"));
 
             System.out.println(++count);
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
         return minister;
     }
 
-    private String extractVal(Document document, String selectorConstant)
-    {
-        if (Objects.nonNull(document))
-        {
+    private String extractVal(Document document, String selectorConstant) {
+        if (Objects.nonNull(document)) {
             Element selectorElement = document.select(selectorConstant)
                     .first();
-            if (Objects.nonNull(selectorElement))
-            {
+            if (Objects.nonNull(selectorElement)) {
                 return selectorElement.text();
             }
         }
         return null;
     }
 
-    private String extractAttr(Document document, String selectorConstant, String attribute)
-    {
-        if (Objects.nonNull(document))
-        {
+    private String extractAttr(Document document, String selectorConstant, String attribute) {
+        if (Objects.nonNull(document)) {
             Element selectorElement = document.select(selectorConstant)
                     .first();
-            if (Objects.nonNull(selectorElement))
-            {
+            if (Objects.nonNull(selectorElement)) {
                 return selectorElement.attr(attribute);
             }
         }
